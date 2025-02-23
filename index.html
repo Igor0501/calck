@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор вартості</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Переконайся, що шлях до стилю правильний -->
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <div class="navi-content">
+                <button onclick="window.location.href='#wide-format'">Широкоформатний друк</button>
+                <button onclick="window.location.href='#uv-print'">УФ друк</button>
+                <button onclick="window.location.href='#digital-print'">Цифровий друк</button>
+                <button onclick="window.location.href='#offset-print'">Офсетний друк</button>
+                <button onclick="window.location.href='#dtf-print'">ДТФ друк</button>
+                <button onclick="window.location.href='#souvenir'">Сувенірка</button>
+            </div>
+        </nav>
+
+        <div class="calculator">
+            <h2>Калькулятор вартості УФ ДРУКУ</h2>
+            <div class="input-group">
+                <label for="width">Ширина (см):</label>
+                <input type="number" id="width" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label for="height">Висота (см):</label>
+                <input type="number" id="height" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label for="material">Матеріал:</label>
+                <select id="material"></select>
+            </div>
+            
+            <div class="checkboxes">
+                <div class="checkbox-column">
+                    <label><input type="checkbox" id="cmyk"> CMYK</label>
+                    <label><input type="checkbox" id="cmyk2"> CMYK+CMYK</label>
+                    <label><input type="checkbox" id="cmykWhite"> CMYK+White</label>
+                    <label><input type="checkbox" id="mattOracal"> Матовий оракал</label>
+                    <label><input type="checkbox" id="colorOracal"> Кольоровий оракал</label>
+                </div>
+                <div class="checkbox-column">
+                    <label><input type="checkbox" id="scotch"> Скотч листовий</label>
+                    <label><input type="checkbox" id="bend1"> 1 гнуття</label>
+                    <label><input type="checkbox" id="bend2"> 2 гнуття</label>
+                    <label><input type="checkbox" id="laserCut"> Порізка лазер</label>
+                    <label><input type="checkbox" id="knifeCut"> Порізка ножем</label>
+                </div>
+            </div>
+                                    
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

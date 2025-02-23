@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор друку</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h2>Калькулятор вартості друку</h2>
+    <label for="tirazh">Тираж:</label>
+    <input type="number" id="tirazh"><br><br>
+
+    <label for="kolirnist">Колірність:</label>
+    <input type="number" id="kolirnist"><br><br>
+
+    <label for="paper">Папір:</label>
+    <select id="paper">
+      <option value="Крейда 90">Крейда 90</option>
+      <option value="Крейда 115">Крейда 115</option>
+      <option value="Крейда 130">Крейда 130</option>
+      <option value="Крейда 150">Крейда 150</option>
+      <option value="Крейда 170">Крейда 170</option>
+      <option value="Крейда 200">Крейда 200</option>
+      <option value="Крейда 250">Крейда 250</option>
+      <option value="Крейда 300">Крейда 300</option>
+      <option value="Крейда 350">Крейда 350</option>
+      <option value="Офсетка 80">Офсетка 80</option>
+      <option value="Офсетка 120">Офсетка 120</option>
+      <option value="Офсетка 160">Офсетка 160</option>
+      <option value="Офсетка 250">Офсетка 250</option>
+      <option value="Картон 220">Картон 220</option>
+      <option value="Картон 235">Картон 235</option>
+      <option value="Крафт">Крафт</option>
+      <option value="Папір клієнта">Папір клієнта</option>
+    </select><br><br>
+
+    <button onclick="calculate()">Розрахувати</button><br><br>
+
+    <p id="result"></p>
+
+    <h2>Розрахунок тиражу</h2>
+    <label for="width">Ширина (мм):</label>
+    <input type="number" id="width"><br><br>
+
+    <label for="height">Висота (мм):</label>
+    <input type="number" id="height"><br><br>
+
+    <label for="requiredTirazh">Необхідний тираж:</label>
+    <input type="number" id="requiredTirazh"><br><br>
+
+    <button onclick="calculateTirazh()">Розрахувати тираж друку</button><br><br>
+
+    <p id="tirazhResult"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
