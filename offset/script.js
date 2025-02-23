@@ -6,7 +6,7 @@ let workbook;
 
 async function fetchExcelFile() {
     try {
-        const response = await fetch('/path/to/your/excel/file.xlsx');
+        const response = await fetch('/file_ofset.xlsx');
         const data = await response.arrayBuffer();
         workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
     } catch (error) {
